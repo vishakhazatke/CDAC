@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulated Network Request </title>
+</head>
+<body>
+    <button onclick="startRequest()">Start Request</button>
+
+  <script>
+    
+    function fetchData(url, callback) {
+      console.log("Fetching data from "+ url);
+      
+      setTimeout(() => {
+        const response = "Data from "+  url;
+        callback(response); 
+      }, 2000); 
+    }
+
+    function startRequest() {
+      fetchData("https://www.google.com", (response) => {
+        console.log("Response:", response); 
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulated Network Request </title>
+</head>
+<body>
+  <button onclick="startRequestWithErrorHandling()">Start Request with Error Handling</button>
+
+  <script>
+    
+    function fetchData(url, callback) {
+      console.log(`Fetching data from ${url}...`);
+
+      setTimeout(() => {
+        const isError = Math.random() > 0.5; 
+
+        if (isError) {
+          callback("Network error occurred", null); 
+        } else {
+          const response = `Data from ${url}`;
+          callback(null, response); 
+        }
+      }, 2000); 
+    }
+
+    function startRequestWithErrorHandling() {
+      fetchData("https://google.com", (error, response) => {
+        if (error) {
+          console.log("Error:", error); 
+        } else {
+          console.log("Response:", response); 
+        }
+      });
+    }
+  </script>
+</body>
+</html>
