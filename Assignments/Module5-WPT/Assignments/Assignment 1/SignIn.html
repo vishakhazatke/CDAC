@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        * {
+            box-sizing:border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:rgb(233, 206, 171)
+        }
+
+        .container {
+            background: rgb(222, 108, 108);
+            padding: 50px;
+            border-radius: 8px;
+            width: 400px;
+        }
+
+        .signin-form {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+       
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #072b48;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #33c1dd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="signin-form">
+            <h2>Sign In</h2>
+           <br><br>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign In </button>
+            <br>
+            <div>
+                <p>Don't have an account ? <a href="SignUp.html" > SignUp</p> 
+            </div>
+        </form>
+    </div>
+</body>
+</html>
