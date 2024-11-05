@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Paradise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png"> 
+
+    <style>
+      
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #c5d8f5;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0078A8;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 1.5em;
+    color: #121112;
+    font-weight: bold;
+}
+
+.nav-links, .user-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a, .user-links a {
+    color: #151313;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover, .user-links a:hover {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.user-links {
+    position: absolute;
+    right: 20px;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0078A8;
+    box-shadow: 0px 8px 16px rgba(247, 245, 245, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-icon {
+    display: none; /* Hidden on desktop */
+}
+
+/* Scrolling Text */
+marquee {
+    background-color: #050707;
+    color: #121414;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: url('tourism-background.jpg') center/cover no-repeat; 
+    color: #0a0909;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0078A8;
+    color: #0c0b0b;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background-color: #555;
+    color: #ffd700;
+}
+
+footer {
+    background-color: #0078A8;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    bottom: 20px;
+    justify-content:center;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #100a0a;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    .nav-links, .user-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0078A8;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        left: 0;
+    }
+
+    .nav-links.active, .user-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> 
+            <span>Explore World</span>
+        </div>
+        <ul class="user-links">
+            <li><a href="website.html">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+        </div>
+    </nav>
+</header>
+
+<marquee behavior="scroll" direction="left">Discover the world's most beautiful destinations with us! 🌍</marquee>
+
+<main>
+    <section class="hero">
+        <h1>Welcome to Your Next Adventure 🌍</h1>
+        <p>Plan the perfect trip with stunning destinations 🌍 and memorable experiences.</p>
+        <br>
+        <button>Explore Destinations</button>
+        <br><br><br><br><br><br><br>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+     
+        <ul class="social-icons">
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+</body>
+</html>
+
