@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Bold Words</title>
+</head>
+<body>
+
+<h2>Hover to Highlight Bold Words</h2>
+<p>
+    We have just started this section for the users <strong>beginner to intermediate</strong> who want to work with various 
+    <strong>JavaScript problems</strong> and write <strong>scripts online</strong> to test their <strong>JavaScript skill</strong>.
+</p>
+<a href="#" onmouseover="highlightBold()" onmouseout="removeBold()">Hover the mouse here to Highlight Bold</a>
+
+<script>
+    function highlightBold(){
+        const Boldelements = document.querySelectorAll("strong");
+        Boldelements.forEach(element =>{
+            element.style.backgroundColor= "yellow";
+        });
+    }
+
+    function removeBold(){
+        const Boldelements = document.querySelectorAll("strong");
+        Boldelements.forEach(element =>{
+            element.style.backgroundColor="transparent";
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Dropdown Items</title>
+</head>
+
+<body>
+
+<h2>Remove Items from Drop-Down</h2>
+<select id="myDropdown">
+    <option value="1">BE/B.Tech</option>
+    <option value="2">ME/M.Tech</option>
+    <option value="3">BSC</option>
+    <option value="4">BCA</option>
+</select>
+<button onclick="removedropdownitem()" >Remove Selected Item</button>
+
+<script>
+    function removedropdownitem(){
+        const dropdown = document.getElementById("myDropdown");
+        dropdown.remove(dropdown.selectedIndex);
+    }
+</script>
+</body>
+</html>
